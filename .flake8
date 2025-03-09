@@ -1,0 +1,6 @@
+[flake8]
+max-line-length = 118
+extend-ignore = E203, E501, W503
+extend-select = C90, E, F, W, B, C, B9, BAND, PL
+exclude = .venv, __pycache__, migrations
+inline-quotes = double
