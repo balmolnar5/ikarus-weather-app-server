@@ -21,8 +21,10 @@ flake8-pytest-style==2.1.0
 flake8-quotes==3.4.0
 flake8-unused-arguments==0.0.13
 Flask==3.1.0
+gunicorn==23.0.0
 h11==0.14.0
 httpcore==1.0.7
+httptools==0.6.4
 httpx==0.28.1
 idna==3.10
 inflection==0.5.1
@@ -44,6 +46,7 @@ platformdirs==4.3.6
 pycodestyle==2.12.1
 pyflakes==3.2.0
 Pygments==2.19.1
+python-dotenv==1.0.1
 python-multipart==0.0.20
 PyYAML==6.0.2
 referencing==0.36.2
@@ -57,4 +60,8 @@ stevedore==5.4.1
 swagger_ui_bundle==1.1.0
 typing_extensions==4.12.2
 urllib3==2.3.0
+uvicorn==0.34.0
+uvloop==0.21.0
+watchfiles==1.0.4
+websockets==15.0.1
 Werkzeug==3.1.3
