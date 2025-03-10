@@ -3,8 +3,8 @@ info:
     title: Weather App API
     description: API for a Flask-based weather application
     version: 0.0.1
-servers:
-    - url: /api
+# servers:
+#     - url: /api
 paths:
     /weather/current/:
         get:
