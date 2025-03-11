@@ -6,7 +6,7 @@ info:
 servers:
     - url: /api
 paths:
-    /weather/current/:
+    /weather/current:
         get:
             summary: Get current weather for a location
             operationId: controllers.weather.get_current_weather
