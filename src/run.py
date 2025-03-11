@@ -9,7 +9,9 @@ load_dotenv()
 app = FlaskApp(__name__)
 
 app.add_api(specification="../openapi.yaml")
+
 app.app.config["WEATHER_API_KEY"] = os.getenv("WEATHER_API_KEY")
+app.app.config["WEATHER_API_BASE_URL"] = "http://api.weatherapi.com/v1"
 
 
 def main() -> None:

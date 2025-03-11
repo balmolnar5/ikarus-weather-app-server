@@ -1,17 +1,17 @@
-import requests
 from flask import current_app, jsonify
 
+from services.weather_service import WeatherService
 
-def get_current_weather(location):
-    print(location)
 
-    url = "http://api.weatherapi.com/v1/current.json"
-    api_key = current_app.config.get("WEATHER_API_KEY")
+def get_current_weather(location: str):
+    if not location or len(location.strip()) == 0:
+        return jsonify({"error": "Location parameter is required"}), 400
 
-    print(api_key)
-    params = {"key": api_key, "q": location}
+    weather_service = WeatherService(
+        api_key=current_app.config.get("WEATHER_API_KEY"),
+        base_url=current_app.config.get("WEATHER_API_BASE_URL"),
+    )
 
-    # TODO: do this in the service
-    response = requests.get(url, params=params, timeout=5)
+    data = weather_service.get_current_weather(location)
 
-    return jsonify(response.json()), 200
+    return jsonify(data.json()), 200
