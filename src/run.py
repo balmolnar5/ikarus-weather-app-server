@@ -2,11 +2,20 @@ import os
 from pathlib import Path
 
 from connexion import FlaskApp
+from connexion.middleware import MiddlewarePosition
 from dotenv import load_dotenv
+from starlette.middleware.cors import CORSMiddleware
 
 load_dotenv()
 
 app = FlaskApp(__name__)
+
+app.add_middleware(
+    CORSMiddleware,
+    position=MiddlewarePosition.BEFORE_EXCEPTION,
+    allow_origins=["*"],
+    allow_methods=["*"],
+)
 
 app.add_api(specification="../openapi.yaml")
 
