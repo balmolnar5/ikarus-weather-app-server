@@ -56,22 +56,19 @@ components:
                 lon:
                     type: number
                     format: float
-                tz_id:
+                time_zone_id:
                     type: string
-                localtime_epoch:
+                localtime_epoch_ms:
                     type: integer
-                localtime:
-                    type: string
-                    format: date-time
+                    format: int64
 
         CurrentWeather:
             type: object
             properties:
                 last_updated_epoch:
                     type: integer
-                last_updated:
-                    type: string
-                    format: date-time
+                condition:
+                    $ref: "#/components/schemas/Condition"
                 temp_c:
                     type: number
                     format: float
@@ -79,10 +76,7 @@ components:
                     type: number
                     format: float
                 is_day:
-                    type: integer
-                    enum: [0, 1]
-                condition:
-                    $ref: "#/components/schemas/Condition"
+                    type: boolean
                 wind_mph:
                     type: number
                     format: float
@@ -93,21 +87,7 @@ components:
                     type: integer
                 wind_dir:
                     type: string
-                pressure_mb:
-                    type: number
-                    format: float
-                pressure_in:
-                    type: number
-                    format: float
-                precip_mm:
-                    type: number
-                    format: float
-                precip_in:
-                    type: number
-                    format: float
                 humidity:
-                    type: integer
-                cloud:
                     type: integer
                 feelslike_c:
                     type: number
@@ -115,37 +95,7 @@ components:
                 feelslike_f:
                     type: number
                     format: float
-                windchill_c:
-                    type: number
-                    format: float
-                windchill_f:
-                    type: number
-                    format: float
-                heatindex_c:
-                    type: number
-                    format: float
-                heatindex_f:
-                    type: number
-                    format: float
-                dewpoint_c:
-                    type: number
-                    format: float
-                dewpoint_f:
-                    type: number
-                    format: float
-                vis_km:
-                    type: number
-                    format: float
-                vis_miles:
-                    type: number
-                    format: float
                 uv:
-                    type: number
-                    format: float
-                gust_mph:
-                    type: number
-                    format: float
-                gust_kph:
                     type: number
                     format: float
 
@@ -156,5 +106,7 @@ components:
                     type: string
                 icon:
                     type: string
+                    format: uri
                 code:
                     type: integer
+                    format: int32

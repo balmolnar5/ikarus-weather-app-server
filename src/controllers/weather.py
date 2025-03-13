@@ -12,6 +12,6 @@ def get_current_weather(location: str):
         base_url=current_app.config.get("WEATHER_API_BASE_URL"),
     )
 
-    data = weather_service.get_current_weather(location)
+    weather_data = weather_service.get_current_weather(location)
 
-    return jsonify(data.json()), 200
+    return jsonify(weather_data), 200
