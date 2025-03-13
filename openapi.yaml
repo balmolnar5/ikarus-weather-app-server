@@ -77,10 +77,10 @@ components:
                     format: float
                 is_day:
                     type: boolean
-                wind_mph:
+                wind_speed_mph:
                     type: number
                     format: float
-                wind_kph:
+                wind_speed_kph:
                     type: number
                     format: float
                 wind_degree:

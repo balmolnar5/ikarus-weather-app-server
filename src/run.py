@@ -14,7 +14,7 @@ app.add_middleware(
     CORSMiddleware,
     position=MiddlewarePosition.BEFORE_EXCEPTION,
     allow_origins=["*"],
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE"],
 )
 
 app.add_api(specification="../openapi.yaml")
