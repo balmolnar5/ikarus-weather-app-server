@@ -2,7 +2,7 @@
 
 # ikarus-weather-app-server
 
-The back-end (Flask) of a simple weather app that fetches real-time weather data.
+The back-end (Flask) of a simple weather app that fetches real-time weather data from [WeatherAPI](https://www.weatherapi.com/).
 
 ## Project Setup
 
