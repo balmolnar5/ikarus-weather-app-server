@@ -14,7 +14,7 @@ Versions used for development:
 Steps:
 
 1. Use Python 3
-1. Setup a virtual environment (e.g., with `venv`) and install the project dependencies (`pip install -r requirements.txt`)
+1. Setup a virtual environment (e.g., with `venv`) and install the package dependencies (`pip install -r requirements.txt`)
 1. Create a `.env` file and paste the API key received into it (see `.env.example`)
 1. Start the dev server by running `src/run.py`:
     - `cd src/`
